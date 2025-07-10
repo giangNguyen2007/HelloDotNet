@@ -101,3 +101,7 @@ app.MapControllers();
 
 app.Run();
 
+namespace Game.API
+{
+    public partial class GameApiProgram {}
+}

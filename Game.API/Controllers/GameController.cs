@@ -40,7 +40,7 @@ public class GameController : Controller
     [HttpGet("{id:int}")]
     public async Task<IActionResult> GetById([FromRoute] int id)
     {
-        await _massTransitService.SendRequestForResponseAsync(1);
+        //await _massTransitService.SendRequestForResponseAsync(1);
         GameModel? game = await _gameRepo.getByIdAsync(id);
 
         if (game == null)
