@@ -1,0 +1,6 @@
+
+
+GRPC localhost:7155/product.ProductService/GetProductInfo
+{
+    "productId" : "2"
+}

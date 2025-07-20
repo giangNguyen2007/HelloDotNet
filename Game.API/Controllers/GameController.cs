@@ -15,10 +15,10 @@ public class GameController : Controller
     private readonly IGameRepository _gameRepo;
     private readonly IMassTransitService _massTransitService;
 
-    public GameController( IGameRepository gameRepo, IMassTransitService massTransitService)
+    public GameController( IGameRepository gameRepo)
     {
         _gameRepo = gameRepo;
-        _massTransitService = massTransitService;
+        //_massTransitService = massTransitService;
     }
 
     //  === GET ====
@@ -31,8 +31,8 @@ public class GameController : Controller
         // Select :  convert list of GameModel to IEnumerable of GetGameDto
         IEnumerable<GetGameDto> gamesDTO = games.Select(s => s.ToGetGameDto());
 
-        await RabbitMQService.PublishAsync();
-        await _massTransitService.PublishMessage("Hello RabbitMQ");
+        //await RabbitMQService.PublishAsync();
+        //await _massTransitService.PublishMessage("Hello RabbitMQ");
         
         return Ok(gamesDTO);
     }

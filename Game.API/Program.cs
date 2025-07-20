@@ -6,6 +6,7 @@ using Game.API.Interfaces;
 using Game.API.Repository;
 using Game.API.Data;
 using Game.API.Dtos;
+using Game.API.GRPC.Service;
 using MassTransit;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
@@ -16,25 +17,25 @@ using SharedLibrary.MassTransit.RabbitMQ;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddMassTransit(x =>
-{
-    x.AddRequestClient<IMqRequest>();
-    x.UsingRabbitMq((context, cfg) =>
-    {
-        cfg.Host("localhost", "/", h =>
-        {
-             h.Username("guest"); 
-             h.Password("guest");
-        });
-
-        // Optional: configure exchange durability, etc.
-    });
-    
-});
+// builder.Services.AddMassTransit(x =>
+// {
+//     x.AddRequestClient<IMqRequest>();
+//     x.UsingRabbitMq((context, cfg) =>
+//     {
+//         cfg.Host("localhost", "/", h =>
+//         {
+//              h.Username("guest"); 
+//              h.Password("guest");
+//         });
+//
+//         // Optional: configure exchange durability, etc.
+//     });
+//     
+// });
 
 builder.Services.AddControllers();
 
-builder.Services.AddScoped<IMassTransitService, MassTransitService>();
+//builder.Services.AddScoped<IMassTransitService, MassTransitService>();
 
 // builder.Services.AddControllers().AddNewtonsoftJson(options =>
 // {
@@ -84,6 +85,11 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IGameRepository, GameRepository>();
 builder.Services.AddScoped<ICommentRepository, CommentRepository>();
 
+builder.Services.AddGrpc();
+builder.Services.AddGrpcReflection();
+
+
+
 var app = builder.Build();
 
 // if (app.Environment.IsDevelopment())
@@ -98,6 +104,13 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
+app.MapGrpcService<ProductGrpcService>(); // New gRPC service
+
+if (app.Environment.IsDevelopment())
+{
+    app.MapGrpcReflectionService();
+}
+
 
 app.Run();
 

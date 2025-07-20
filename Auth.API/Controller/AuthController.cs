@@ -28,8 +28,8 @@ public class AuthController : Microsoft.AspNetCore.Mvc.Controller
     [HttpGet]
     public async Task<IActionResult> GetALlUsers()
     {
-        List<UserModel> allUsers = await _userDbContext.Users.ToListAsync();
-        return Ok(allUsers);
+        //List<UserModel> allUsers = await _userDbContext.Users.ToListAsync();
+        return Ok("hello");
     }
 
     [HttpPost("register")]
