@@ -1,11 +1,13 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=ea31473c_002Dca8a_002D46a8_002D8394_002Df827cb3878a0/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Hello World" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
-  &lt;TestAncestor&gt;
-    &lt;TestId&gt;xUnit::6D7DCFEE-38E0-460A-8C82-D9D8AF89EEE7::net8.0::HelloTest.UnitTest1.GetAllTest&lt;/TestId&gt;
-    &lt;TestId&gt;xUnit::6D7DCFEE-38E0-460A-8C82-D9D8AF89EEE7::net8.0::HelloTest.UnitTest1.GetSingleGameTest&lt;/TestId&gt;
-    &lt;TestId&gt;xUnit::6D7DCFEE-38E0-460A-8C82-D9D8AF89EEE7::net8.0::HelloTest.UnitTest1.PostSingleGameTest&lt;/TestId&gt;
-    &lt;TestId&gt;xUnit::6D7DCFEE-38E0-460A-8C82-D9D8AF89EEE7::net8.0::HelloTest.Test.Auth.API.AuthApiTest.GetAllUsersTest&lt;/TestId&gt;
-    &lt;TestId&gt;xUnit::6D7DCFEE-38E0-460A-8C82-D9D8AF89EEE7::net8.0::HelloTest.Test.Auth.API.AuthApiTest&lt;/TestId&gt;
-    &lt;TestId&gt;xUnit::6D7DCFEE-38E0-460A-8C82-D9D8AF89EEE7::net8.0::HelloTest.Test.Order.API.OrderAPITest.GetAllTest&lt;/TestId&gt;
-  &lt;/TestAncestor&gt;
+	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AConsumeContext_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003FAppData_003FRoaming_003FJetBrains_003FRider2025_002E1_003Fresharper_002Dhost_003FSourcesCache_003Fb82153efccfb2e82d0f1f2892920706b789f382872aa6045b050f2c8875c1_003FConsumeContext_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
+	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AIConsumer_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003FAppData_003FRoaming_003FJetBrains_003FRider2025_002E1_003Fresharper_002Dhost_003FSourcesCache_003F382ff0bd29dac925c9d16054587110b23c55cbba68d5ad4b36facf90ee7190b5_003FIConsumer_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=ea31473c_002Dca8a_002D46a8_002D8394_002Df827cb3878a0/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Hello World" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::6D7DCFEE-38E0-460A-8C82-D9D8AF89EEE7::net8.0::HelloTest.UnitTest1.GetAllTest&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::6D7DCFEE-38E0-460A-8C82-D9D8AF89EEE7::net8.0::HelloTest.UnitTest1.GetSingleGameTest&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::6D7DCFEE-38E0-460A-8C82-D9D8AF89EEE7::net8.0::HelloTest.UnitTest1.PostSingleGameTest&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::6D7DCFEE-38E0-460A-8C82-D9D8AF89EEE7::net8.0::HelloTest.Test.Auth.API.AuthApiTest.GetAllUsersTest&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::6D7DCFEE-38E0-460A-8C82-D9D8AF89EEE7::net8.0::HelloTest.Test.Auth.API.AuthApiTest&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::6D7DCFEE-38E0-460A-8C82-D9D8AF89EEE7::net8.0::HelloTest.Test.Order.API.OrderAPITest.GetAllTest&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

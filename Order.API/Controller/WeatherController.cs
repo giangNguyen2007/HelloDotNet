@@ -1,5 +1,7 @@
+using MassTransit;
 using Microsoft.AspNetCore.Mvc;
 using Order.API.GRPC;
+using SharedLibrary.MassTransit.RabbitMQ;
 
 namespace Order.API.Controller;
 
@@ -8,25 +10,36 @@ namespace Order.API.Controller;
 public class WeatherController : Microsoft.AspNetCore.Mvc.Controller
 {
     private readonly GrpcClientService _grpcClientService;
+    
+    private readonly IPublishEndpoint _publishEndpoint;   // MassTransit Publisher
 
-    public WeatherController(GrpcClientService grpcClientService)
+    public WeatherController(GrpcClientService grpcClientService, IPublishEndpoint publishEndpoint)
     {
         _grpcClientService = grpcClientService;
+        _publishEndpoint = publishEndpoint;
     }
 
     [HttpGet]
     public async Task<IActionResult> GetAll()
     {
 
+        // send grpc to ProductAPI go get stock
         var response = await _grpcClientService.GetProductAsync(1);
+        
+        Console.WriteLine($"current product quantity = {response.Stock}");
+        
+        
+        // send back message to update stock
+        _publishEndpoint.Publish<UpdateStockMsg>(new UpdateStockMsg()
+            {
+                ProductId = 1,
+                Quantity = response.Stock - 1
+            }
+        );
         
         return Ok(response);
     }
     
-    record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
-    {
-        public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
-    }
     
     [HttpPost]
     public async Task<IActionResult> PostWeather()

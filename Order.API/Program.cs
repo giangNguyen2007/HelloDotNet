@@ -6,27 +6,31 @@ using Product;
 var builder = WebApplication.CreateBuilder(args);
 
 
-// builder.Services.AddMassTransit(x =>
-// {
-//     x.AddConsumer<MassTransitConsumer>();
-//     x.AddConsumer<MassTransitConsumer2>(); // Register the consumer
-//
-//     x.UsingRabbitMq((context, cfg) =>
-//     {
-//         cfg.Host("localhost");
-//
-//         // Configure the receive endpoint and bind the consumer
-//         cfg.ReceiveEndpoint("order-submitted-queue", e =>
-//         {
-//             e.ConfigureConsumer<MassTransitConsumer>(context);
-//         });
-//         
-//         cfg.ReceiveEndpoint("order-submitted-queue2", e =>
-//         {
-//             e.ConfigureConsumer<MassTransitConsumer2>(context);
-//         });
-//     });
-// });
+builder.Services.AddMassTransit(x =>
+{
+    x.AddConsumer<MassTransitConsumer>();
+    //x.AddConsumer<MassTransitConsumer2>(); // Register the consumer
+
+    x.UsingRabbitMq((context, cfg) =>
+    {
+        cfg.Host("rabbitmq://localhost", h =>
+        {
+            h.Username("guest");
+            h.Password("guest");
+        });
+
+        // Configure the receive endpoint and bind the consumer
+        cfg.ReceiveEndpoint("order-submitted-queue", e =>
+        {
+            e.ConfigureConsumer<MassTransitConsumer>(context);
+        });
+        
+        // cfg.ReceiveEndpoint("order-submitted-queue2", e =>
+        // {
+        //     e.ConfigureConsumer<MassTransitConsumer2>(context);
+        // });
+    });
+});
 
 builder.Services.AddControllers();
 // Add services to the container.

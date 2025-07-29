@@ -4,3 +4,6 @@ GET http://localhost:5254/weather/
 Accept: application/json
 
 ###
+
+GET https://localhost:7243/weather/
+Accept: application/json

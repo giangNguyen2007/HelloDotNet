@@ -8,7 +8,7 @@ public class MassTransitConsumer : IConsumer<MqMessage>
 {
     public async Task Consume(ConsumeContext<MqMessage> context)
     {
-        var message = context.Message;
+        var message = context.Message.Message;
         // Your business logic here
         Console.WriteLine($"Received Message: {message}");
         await Task.CompletedTask;

@@ -17,25 +17,28 @@ using SharedLibrary.MassTransit.RabbitMQ;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// builder.Services.AddMassTransit(x =>
-// {
-//     x.AddRequestClient<IMqRequest>();
-//     x.UsingRabbitMq((context, cfg) =>
-//     {
-//         cfg.Host("localhost", "/", h =>
-//         {
-//              h.Username("guest"); 
-//              h.Password("guest");
-//         });
-//
-//         // Optional: configure exchange durability, etc.
-//     });
-//     
-// });
+builder.Services.AddMassTransit(x =>
+{
+    
+    x.AddConsumer<UpdateStockConsumerService>();
+    
+    x.UsingRabbitMq((context, cfg) =>
+    {
+        cfg.Host("localhost", "/", h =>
+        {
+             h.Username("guest"); 
+             h.Password("guest");
+        });
+        
+        cfg.ReceiveEndpoint("update-stock-queue", e =>
+            e.ConfigureConsumer<UpdateStockConsumerService>(context)
+        );
+       
+    });
+    
+});
 
 builder.Services.AddControllers();
-
-//builder.Services.AddScoped<IMassTransitService, MassTransitService>();
 
 // builder.Services.AddControllers().AddNewtonsoftJson(options =>
 // {
