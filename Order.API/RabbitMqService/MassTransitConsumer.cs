@@ -2,7 +2,7 @@ using MassTransit;
 using SharedLibrary;
 using SharedLibrary.MassTransit.RabbitMQ;
 
-namespace Product.API.RabbitMqService;
+namespace Order.API.RabbitMqService;
 
 public class MassTransitConsumer : IConsumer<MqMessage>
 {

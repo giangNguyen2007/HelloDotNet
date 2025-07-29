@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+import "google/protobuf/empty.proto";
+
+package product;
+
+service ProductService {
+  rpc GetProductInfo (ProductRequest) returns (ProductReply);
+}
+
+message ProductRequest {
+  string productId = 1;
+}
+
+message ProductReply {
+  string name = 1;
+  int32 stock = 2;
+}

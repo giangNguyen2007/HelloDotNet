@@ -37,7 +37,7 @@
       <ProjectReference Include="..\Auth.API\Auth.API.csproj" />
       <ProjectReference Include="..\Game.API\Game.API.csproj" />
       <ProjectReference Include="..\GateWay.API\GateWay.API.csproj" />
-      <ProjectReference Include="..\Product.API\Product.API.csproj" />
+      <ProjectReference Include="..\Order.API\Order.API.csproj" />
     </ItemGroup>
 
 </Project>

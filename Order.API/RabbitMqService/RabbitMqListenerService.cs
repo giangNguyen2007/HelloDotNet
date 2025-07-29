@@ -1,6 +1,6 @@
 using RabbitMQ.Client;
 
-namespace Product.API.RabbitMqService;
+namespace Order.API.RabbitMqService;
 
 public class RabbitMqListenerService
 {

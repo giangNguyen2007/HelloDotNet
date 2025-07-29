@@ -6,5 +6,6 @@
     &lt;TestId&gt;xUnit::6D7DCFEE-38E0-460A-8C82-D9D8AF89EEE7::net8.0::HelloTest.UnitTest1.PostSingleGameTest&lt;/TestId&gt;
     &lt;TestId&gt;xUnit::6D7DCFEE-38E0-460A-8C82-D9D8AF89EEE7::net8.0::HelloTest.Test.Auth.API.AuthApiTest.GetAllUsersTest&lt;/TestId&gt;
     &lt;TestId&gt;xUnit::6D7DCFEE-38E0-460A-8C82-D9D8AF89EEE7::net8.0::HelloTest.Test.Auth.API.AuthApiTest&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::6D7DCFEE-38E0-460A-8C82-D9D8AF89EEE7::net8.0::HelloTest.Test.Order.API.OrderAPITest.GetAllTest&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

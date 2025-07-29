@@ -1,17 +1,14 @@
-
-
 using Game.API;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Testing;
-using Microsoft.Extensions.DependencyInjection;
 
-namespace HelloTest;
+namespace HelloTest.Test.Game.API;
 
-public class GateWayTest_WebAppFactory : WebApplicationFactory<GateWayProgram>
+public class GateWayTestWebAppFactory : WebApplicationFactory<GateWayProgram>
 {
     private readonly string _mockUrl;
 
-    public GateWayTest_WebAppFactory(string mockUrl)
+    public GateWayTestWebAppFactory(string mockUrl)
     {
         _mockUrl = mockUrl;
     }
