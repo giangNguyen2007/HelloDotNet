@@ -1,4 +1,4 @@
-using Game.API;
+using ProductAPI;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Testing;
 

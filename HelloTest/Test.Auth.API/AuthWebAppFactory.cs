@@ -1,7 +1,7 @@
 using Auth.API;
 using Auth.API.Model;
-using Game.API.Data;
-using Game.API.Model;
+using ProductAPI.Data;
+using ProductAPI.Model;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.EntityFrameworkCore;

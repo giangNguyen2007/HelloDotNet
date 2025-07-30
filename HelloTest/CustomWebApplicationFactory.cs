@@ -1,6 +1,6 @@
-using Game.API;
-using Game.API.Data;
-using Game.API.Model;
+using ProductAPI;
+using ProductAPI.Data;
+using ProductAPI.Model;
 using HelloTest.Test.Auth.API;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Testing;

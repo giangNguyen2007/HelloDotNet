@@ -1,9 +1,9 @@
 using System.Net;
 using System.Net.Http.Json;
 using FluentAssertions;
-using Game.API;
-using Game.API.Dtos.Game;
-using Game.API.Model;
+using ProductAPI;
+using ProductAPI.Dtos.Game;
+using ProductAPI.Model;
 using HelloTest.Test.Auth.API;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.VisualStudio.TestPlatform.TestHost;
